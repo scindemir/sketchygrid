@@ -12,10 +12,10 @@ h1 {
 
 #container {
     margin-top: 5%;
-  display: grid;
+    display: grid;
     height: 150px;
     width: 200px;
-  float: left;
+    float: left;
     margin-left: 28%;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 1fr);
