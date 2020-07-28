@@ -24,8 +24,11 @@ function makeRows(rows, cols) {
 
 makeRows(16, 16);
 
+
+
 $(".gridItem").mouseover(function(){
-    $(this).css("background-color", "black");
+    let userColor = "rgb( " + Math.floor(Math.random(250) * 256) + ", " + Math.floor(Math.random() * 50) + ", " + Math.floor(Math.random() * 100) + ")";
+    $(this).css("background-color", userColor);
 })
 
 
