@@ -1,3 +1,5 @@
+
+
 const span = document.getElementById("buttonBay");
 var btn1 = document.createElement("button");
 const text = document.createTextNode("button1");
@@ -11,18 +13,19 @@ $(btn1).click(function(){
 
 
 const container = document.getElementById("container");
+let grids = document.querySelectorAll(".gridItem")
 
-function makeRows(rows, cols) {
-  container.style.setProperty('--grid-rows', rows);
-  container.style.setProperty('--grid-cols', cols);
-  for (c = 0; c < (rows * cols); c++) {
+function makeGrid(num) {
+  container.style.setProperty('--grid-rows', num);
+  container.style.setProperty('--grid-cols', num);
+  for (i = 0; i < (num * num); i++) {
     let cell = document.createElement("div");
     
     container.appendChild(cell).className = "gridItem";
   };
 };
 
-makeRows(16, 16);
+makeGrid(16);
 
 
 function paint(){
@@ -46,7 +49,7 @@ $(btn2).click(function enterNum(){
                    return false;
                 } else {
                   $("#container").empty();
-                  makeRows(amount, amount);
+                  makeGrid(amount);
                   paint();
                 
 }})
