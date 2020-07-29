@@ -43,7 +43,7 @@ btn2.innerHTML = "CUSTOM";
 span.appendChild(btn2);
 
 $(btn2).click(function enterNum(){
-             let amount = window.prompt("Please enter the number of grids in a row", "");
+             let amount = window.prompt("Please enter the number of cells in a row", "");
 
                 if (amount == null || amount == "") {
                    return false;
